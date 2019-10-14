@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">SirmaApp</string>
+    <string name="enterAmt">Enter Amount</string>
+    <string name="enterOpr">Enter Operator</string>
+    <string name="enterMno">Enter Mobile No.</string>
+    <string name="btn_done">Done</string>
+    <string name="add_title">Add New Detail</string>
+    <string name="task_title">Personal Detail</string>
+    <string name="name_field">Field Name</string>
+    <string name="required">Required</string>
+    <string name="address">Address</string>
+    <string name="blood_grp">Bld Grp:</string>
+    <string name="birthDate">DOB:</string>
+
+    <string name="name_display">Display Name</string>
+    <string name="passportId">Passport Id</string>
+    <string name="issue_passport">Passport Issued</string>
+    <string name="expire_passport">Passport Expired</string>
+    <string name="min_length">Minimum Length</string>
+    <string name="max_length">Maximum Length</string>
+    <string name="submit_details">Submit Details</string>
+
+
+</resources>
