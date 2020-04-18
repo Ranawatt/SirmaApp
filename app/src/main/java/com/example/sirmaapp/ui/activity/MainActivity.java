@@ -69,7 +69,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             if (data.hasExtra("intent_task")) {
                 if (data.hasExtra("intent_delete")) {
                     personalRepository.deleteTask((InputField) data.getSerializableExtra("intent_task"));
-
                 } else {
                     personalRepository.updateTask((InputField) data.getSerializableExtra("intent_task"));
                 }

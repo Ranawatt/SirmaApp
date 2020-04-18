@@ -1,11 +1,5 @@
 package com.example.sirmaapp.util;
 
-import android.app.DatePickerDialog;
-import android.widget.DatePicker;
-
-import com.example.sirmaapp.ui.activity.AddDetailActivity;
-
-import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
