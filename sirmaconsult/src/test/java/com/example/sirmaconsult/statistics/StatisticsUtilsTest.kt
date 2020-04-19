@@ -5,8 +5,9 @@ import org.hamcrest.CoreMatchers.`is`
 import org.junit.After
 import org.junit.Before
 import org.junit.Test
+import org.hamcrest.MatcherAssert
+import org.hamcrest.MatcherAssert.assertThat
 
-import org.junit.Assert.*
 
 class StatisticsUtilsTest {
 
@@ -23,8 +24,7 @@ class StatisticsUtilsTest {
         )
 
         val result = getActiveAndCompletedStats(tasks)
-        assertEquals(result.completedTasksPercent,0f)
-        assertEquals(result.activeTasksPercent, 100f)
+
         assertThat(result.activeTasksPercent, `is`(100f))
         assertThat(result.completedTasksPercent, `is`(0f))
     }
@@ -60,11 +60,17 @@ class StatisticsUtilsTest {
     @Test
     fun getActiveAndCompletedStats_empty_returnsZero(){
 
+        val result = getActiveAndCompletedStats(emptyList())
+        assertThat(result.completedTasksPercent,`is`(0f))
+        assertThat(result.activeTasksPercent,`is`(0f))
     }
 
     @Test
     fun getActiveAndCompletedStats_error_returnsZero(){
 
+        val result = getActiveAndCompletedStats(tasks = null)
+        assertThat(result.activeTasksPercent,`is`(0f))
+        assertThat(result.completedTasksPercent,`is`(0f))
     }
     @After
     fun tearDown() {
