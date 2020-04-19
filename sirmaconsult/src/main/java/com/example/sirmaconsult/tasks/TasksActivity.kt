@@ -14,7 +14,7 @@ import com.example.sirmaconsult.R
 import com.google.android.material.navigation.NavigationView
 
 /**
- * Main activity for the todoapp. Holds the Navigation Host Fragment and the Drawer, Toolbar, etc.
+ * Main activity for the sirma app. Holds the Navigation Host Fragment and the Drawer, Toolbar, etc.
  */
 class TasksActivity : AppCompatActivity() {
 

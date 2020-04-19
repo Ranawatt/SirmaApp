@@ -66,4 +66,6 @@ dependencies {
 
     // Kotlin
     implementation 'androidx.fragment:fragment-ktx:1.2.4'
+    // Other dependencies
+    testImplementation 'org.hamcrest:hamcrest-all:1.3'
 }
