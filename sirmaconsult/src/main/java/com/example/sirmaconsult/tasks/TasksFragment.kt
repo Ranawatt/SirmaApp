@@ -1,5 +1,19 @@
 package com.example.sirmaconsult.tasks
 
+import android.os.Bundle
+import android.view.*
+import androidx.appcompat.widget.PopupMenu
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
+import com.example.sirmaconsult.EventObserver
+import com.example.sirmaconsult.R
+import com.example.sirmaconsult.databinding.TasksFragBinding
+import com.example.sirmaconsult.util.setupRefreshLayout
+import com.example.sirmaconsult.util.setupSnackbar
+import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.google.android.material.snackbar.Snackbar
 import timber.log.Timber
 
 /**

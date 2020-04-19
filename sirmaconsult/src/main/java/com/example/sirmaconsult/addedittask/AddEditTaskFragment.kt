@@ -1,8 +1,20 @@
 package com.example.sirmaconsult.addedittask
 
+import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import com.example.sirmaconsult.EventObserver
+import com.example.sirmaconsult.R
+import com.example.sirmaconsult.databinding.AddtaskFragBinding
+import com.example.sirmaconsult.tasks.ADD_EDIT_RESULT_OK
+import com.example.sirmaconsult.util.setupRefreshLayout
+import com.example.sirmaconsult.util.setupSnackbar
+import com.google.android.material.snackbar.Snackbar
 
 /**
  * Main UI for the add task screen. Users can enter a task title and description.

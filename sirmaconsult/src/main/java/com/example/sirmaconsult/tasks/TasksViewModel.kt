@@ -1,9 +1,18 @@
 package com.example.sirmaconsult.tasks
 
 import android.app.Application
-import androidx.lifecycle.AndroidViewModel
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
+import androidx.annotation.DrawableRes
+import androidx.annotation.StringRes
+import androidx.lifecycle.*
+
+
+import com.example.sirmaconsult.Event
+import com.example.sirmaconsult.R
+import com.example.sirmaconsult.data.Task
+import com.example.sirmaconsult.data.Result
+import com.example.sirmaconsult.data.Result.Success
+import com.example.sirmaconsult.data.source.DefaultTasksRepository
+import kotlinx.coroutines.launch
 
 /**
  * ViewModel for the task list screen.

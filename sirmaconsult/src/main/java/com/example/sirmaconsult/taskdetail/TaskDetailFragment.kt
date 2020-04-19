@@ -1,9 +1,18 @@
 package com.example.sirmaconsult.taskdetail
 
-import android.view.Menu
-import android.view.MenuInflater
-import android.view.MenuItem
+import android.os.Bundle
+import android.view.*
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
+import com.example.sirmaconsult.EventObserver
 import com.example.sirmaconsult.R
+import com.example.sirmaconsult.databinding.TaskdetailFragBinding
+import com.example.sirmaconsult.tasks.DELETE_RESULT_OK
+import com.example.sirmaconsult.util.setupRefreshLayout
+import com.example.sirmaconsult.util.setupSnackbar
+import com.google.android.material.snackbar.Snackbar
 
 /**
  * Main UI for the task detail screen.

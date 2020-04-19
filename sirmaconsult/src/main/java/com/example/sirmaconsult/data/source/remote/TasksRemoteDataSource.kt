@@ -1,10 +1,16 @@
 package com.example.sirmaconsult.data.source.remote
 
+
+
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.map
 import com.example.sirmaconsult.data.Task
+import com.example.sirmaconsult.data.Result
+import com.example.sirmaconsult.data.Result.Success
 import com.example.sirmaconsult.data.source.TasksDataSource
 import kotlinx.coroutines.delay
+
 
 /**
  * Implementation of the data source that adds a latency simulating network.
@@ -38,10 +44,10 @@ object TasksRemoteDataSource : TasksDataSource {
         return observableTasks.map { tasks ->
             when (tasks) {
                 is Result.Loading -> Result.Loading
-                is Error -> Error(tasks.exception)
+                is Result.Error -> Result.Error(tasks.exception)
                 is Success -> {
                     val task = tasks.data.firstOrNull() { it.id == taskId }
-                            ?: return@map Error(Exception("Not found"))
+                            ?: return@map Result.Error(Exception("Not found"))
                     Success(task)
                 }
             }
@@ -61,7 +67,7 @@ object TasksRemoteDataSource : TasksDataSource {
         TASKS_SERVICE_DATA[taskId]?.let {
             return Success(it)
         }
-        return Error(Exception("Task not found"))
+        return Result.Error(Exception("Task not found"))
     }
 
     private fun addTask(title: String, description: String) {

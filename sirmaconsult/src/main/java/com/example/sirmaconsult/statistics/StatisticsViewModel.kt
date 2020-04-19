@@ -1,9 +1,12 @@
 package com.example.sirmaconsult.statistics
 
 import android.app.Application
-import androidx.lifecycle.AndroidViewModel
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.*
+import com.example.sirmaconsult.data.Task
+import com.example.sirmaconsult.data.Result
+import com.example.sirmaconsult.data.Result.Success
+import com.example.sirmaconsult.data.source.DefaultTasksRepository
+import kotlinx.coroutines.launch
 
 /**
  * ViewModel for the statistics screen.

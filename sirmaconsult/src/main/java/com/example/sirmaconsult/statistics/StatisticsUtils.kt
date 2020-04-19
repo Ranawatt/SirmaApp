@@ -1,5 +1,7 @@
 package com.example.sirmaconsult.statistics
 
+import com.example.sirmaconsult.data.Task
+
 /**
  * Function that does some trivial computation. Used to showcase unit tests.
  */

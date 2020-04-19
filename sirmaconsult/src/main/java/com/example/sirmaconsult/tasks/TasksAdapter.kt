@@ -1,5 +1,14 @@
 package com.example.sirmaconsult.tasks
 
+import android.view.LayoutInflater
+import android.view.ViewGroup
+import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.ListAdapter
+import androidx.recyclerview.widget.RecyclerView
+import com.example.sirmaconsult.data.Task
+import com.example.sirmaconsult.tasks.TasksAdapter.ViewHolder
+import com.example.sirmaconsult.databinding.TaskItemBinding
+
 /**
  * Adapter for the task list. Has a reference to the [TasksViewModel] to send actions back to it.
  */

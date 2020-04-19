@@ -1,10 +1,15 @@
 package com.example.sirmaconsult.data.source.local
 
 import androidx.lifecycle.LiveData
+import androidx.lifecycle.map
 import com.example.sirmaconsult.data.Task
+import com.example.sirmaconsult.data.Result
+import com.example.sirmaconsult.data.Result.Success
 import com.example.sirmaconsult.data.source.TasksDataSource
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
+
 
 /**
  * Concrete implementation of a data source as a db.
@@ -40,7 +45,7 @@ class TasksLocalDataSource internal constructor(
         } catch (e: Exception) {
             Error(e)
         }
-    }
+    } as Result<List<Task>>
 
     override suspend fun getTask(taskId: String): Result<Task> = withContext(ioDispatcher) {
         try {
@@ -53,7 +58,7 @@ class TasksLocalDataSource internal constructor(
         } catch (e: Exception) {
             return@withContext Error(e)
         }
-    }
+    } as Result<Task>
 
     override suspend fun saveTask(task: Task) = withContext(ioDispatcher) {
         tasksDao.insertTask(task)
