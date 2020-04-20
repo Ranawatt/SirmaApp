@@ -9,6 +9,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.sirmaconsult.EventObserver
 import com.example.sirmaconsult.R
+import com.example.sirmaconsult.data.source.DefaultTasksRepository
 import com.example.sirmaconsult.databinding.TasksFragBinding
 import com.example.sirmaconsult.util.setupRefreshLayout
 import com.example.sirmaconsult.util.setupSnackbar
@@ -21,7 +22,9 @@ import timber.log.Timber
  */
 class TasksFragment : Fragment() {
 
-    private val viewModel by viewModels<TasksViewModel>()
+    private val viewModel by viewModels<TasksViewModel> {
+        TasksViewModelFactory(DefaultTasksRepository.getRepository(requireActivity().application))
+    }
 
     private val args: TasksFragmentArgs by navArgs()
 
