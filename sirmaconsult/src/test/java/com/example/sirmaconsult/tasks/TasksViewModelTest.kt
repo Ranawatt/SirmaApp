@@ -1,24 +1,36 @@
 package com.example.sirmaconsult.tasks
 
-
+import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.lifecycle.Observer
 import androidx.test.core.app.ApplicationProvider
+import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.example.sirmaconsult.Event
 import com.example.sirmaconsult.getOrAwaitValue
 import org.hamcrest.MatcherAssert.assertThat
 import org.hamcrest.core.Is.`is`
 import org.hamcrest.core.IsNot.not
 import org.hamcrest.core.IsNull.nullValue
+import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
+import org.junit.runner.RunWith
 
+@RunWith(AndroidJUnit4::class)
 class TasksViewModelTest {
 
-//    @get:Rule
-//    var instantExecutorRule : InstantTaskExecutorRule()
+    private lateinit var tasksViewModel: TasksViewModel
+
+    // Executes each task synchronously using Architecture Components.
+    @get:Rule
+    var instantExecutorRule = InstantTaskExecutorRule()
+
+    @Before
+    fun setupViewModel() {
+        tasksViewModel = TasksViewModel(ApplicationProvider.getApplicationContext())
+    }
+
     @Test
     fun addNewTask_setsNewTaskEvent() {
-        val tasksViewModel = TasksViewModel(ApplicationProvider.getApplicationContext())
 
         val observer = Observer<Event<Unit>> {}
         try {
