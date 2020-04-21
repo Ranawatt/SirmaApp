@@ -8,6 +8,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.sirmaconsult.EventObserver
 import com.example.sirmaconsult.R
+import com.example.sirmaconsult.TodoApplication
 import com.example.sirmaconsult.data.source.DefaultTasksRepository
 import com.example.sirmaconsult.data.source.TasksRepository
 import com.example.sirmaconsult.databinding.TaskdetailFragBinding
@@ -25,7 +26,7 @@ class TaskDetailFragment : Fragment() {
     private val args: TaskDetailFragmentArgs by navArgs()
 
     private val viewModel by viewModels<TaskDetailViewModel>{
-        TaskDetailViewModelFactory(DefaultTasksRepository.getRepository(requireActivity().application))
+        TaskDetailViewModelFactory((requireContext().applicationContext as TodoApplication).tasksRepository)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
