@@ -60,7 +60,26 @@ class TasksFragmentTest {
         verify(navController).navigate(TasksFragmentDirections.actionTasksFragmentToTaskDetailFragment("id1"))
     }
 
- 
+    @Test
+    fun clickAddTaskButton_navigateToAddEditFragment(){
+        // GIVEN - On the home screen
+        val scenario = launchFragmentInContainer<TasksFragment>(Bundle(), R.style.AppTheme)
+        val navController = mock(NavController::class.java)
+        scenario.onFragment {
+            Navigation.setViewNavController(it.view!!, navController)
+        }
+
+        // WHEN - Click on the "+" button
+        onView(withId(R.id.add_task_fab)).perform(click())
+
+        // THEN - Verify that we navigate to the add screen
+        verify(navController).navigate(
+                TasksFragmentDirections.actionTasksFragmentToAddEditTaskFragment(
+                        null, getApplicationContext<Context>().getString(R.string.add_task)
+                )
+        )
+    }
+
     @After
     fun cleanupDb() = runBlockingTest {
         ServiceLocator.resetRepository()

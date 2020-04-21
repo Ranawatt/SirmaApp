@@ -5,13 +5,20 @@ import androidx.lifecycle.Observer
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.example.sirmaconsult.Event
+import com.example.sirmaconsult.R
 import com.example.sirmaconsult.data.Task
 import com.example.sirmaconsult.data.source.FakeTestRepository
 import com.example.sirmaconsult.getOrAwaitValue
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.ExperimentalCoroutinesApi
+import kotlinx.coroutines.test.TestCoroutineDispatcher
+import kotlinx.coroutines.test.resetMain
+import kotlinx.coroutines.test.setMain
 import org.hamcrest.MatcherAssert.assertThat
 import org.hamcrest.core.Is.`is`
 import org.hamcrest.core.IsNot.not
 import org.hamcrest.core.IsNull.nullValue
+import org.junit.After
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
@@ -23,6 +30,8 @@ class TasksViewModelTest {
     private lateinit var tasksRepository: FakeTestRepository
     private lateinit var tasksViewModel: TasksViewModel
 
+    @ExperimentalCoroutinesApi
+    val testDispatcher: TestCoroutineDispatcher = TestCoroutineDispatcher()
     // Executes each task synchronously using Architecture Components.
     @get:Rule
     var instantExecutorRule = InstantTaskExecutorRule()
@@ -67,5 +76,35 @@ class TasksViewModelTest {
 
         // Then the "Add task" action is visible
         assertThat(tasksViewModel.tasksAddViewVisible.getOrAwaitValue(), `is`(true))
+    }
+
+    @ExperimentalCoroutinesApi
+    @Before
+    fun setupDispatcher() {
+        Dispatchers.setMain(testDispatcher)
+    }
+
+    @Test
+    fun completeTask_dataAndSnackbarUpdated() {
+        // Create an active task and add it to the repository.
+        val task = Task("Title", "Description")
+        tasksRepository.addTasks(task)
+
+        // Mark the task as complete task.
+        tasksViewModel.completeTask(task, true)
+
+        // Verify the task is completed.
+        assertThat(tasksRepository.tasksServiceData[task.id]?.isCompleted, `is`(true))
+
+        // Assert that the snackbar has been updated with the correct text.
+        val snackbarText: Event<Int> =  tasksViewModel.snackbarText.getOrAwaitValue()
+        assertThat(snackbarText.getContentIfNotHandled(), `is`(R.string.task_marked_complete))
+    }
+
+    @ExperimentalCoroutinesApi
+    @After
+    fun tearDownDispatcher() {
+        Dispatchers.resetMain()
+        testDispatcher.cleanupTestCoroutines()
     }
 }
