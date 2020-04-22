@@ -5,6 +5,7 @@ import androidx.lifecycle.Observer
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.example.sirmaconsult.Event
+import com.example.sirmaconsult.MainCoroutineRule
 import com.example.sirmaconsult.R
 import com.example.sirmaconsult.data.Task
 import com.example.sirmaconsult.data.source.FakeTestRepository
@@ -18,11 +19,9 @@ import org.hamcrest.MatcherAssert.assertThat
 import org.hamcrest.core.Is.`is`
 import org.hamcrest.core.IsNot.not
 import org.hamcrest.core.IsNull.nullValue
-import org.junit.After
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
-import org.junit.runner.RunWith
 
 
 class TasksViewModelTest {
@@ -30,8 +29,7 @@ class TasksViewModelTest {
     private lateinit var tasksRepository: FakeTestRepository
     private lateinit var tasksViewModel: TasksViewModel
 
-    @ExperimentalCoroutinesApi
-    val testDispatcher: TestCoroutineDispatcher = TestCoroutineDispatcher()
+
     // Executes each task synchronously using Architecture Components.
     @get:Rule
     var instantExecutorRule = InstantTaskExecutorRule()
@@ -78,12 +76,6 @@ class TasksViewModelTest {
         assertThat(tasksViewModel.tasksAddViewVisible.getOrAwaitValue(), `is`(true))
     }
 
-    @ExperimentalCoroutinesApi
-    @Before
-    fun setupDispatcher() {
-        Dispatchers.setMain(testDispatcher)
-    }
-
     @Test
     fun completeTask_dataAndSnackbarUpdated() {
         // Create an active task and add it to the repository.
@@ -101,10 +93,23 @@ class TasksViewModelTest {
         assertThat(snackbarText.getContentIfNotHandled(), `is`(R.string.task_marked_complete))
     }
 
+//    @ExperimentalCoroutinesApi
+//    val testDispatcher: TestCoroutineDispatcher = TestCoroutineDispatcher()
+//    @ExperimentalCoroutinesApi
+//    @Before
+//    fun setupDispatcher() {
+//        Dispatchers.setMain(testDispatcher)
+//    }
+//
+//    @ExperimentalCoroutinesApi
+//    @After
+//    fun tearDownDispatcher() {
+//        Dispatchers.resetMain()
+//        testDispatcher.cleanupTestCoroutines()
+//    }
+//    Replace above code with beloow code
+
     @ExperimentalCoroutinesApi
-    @After
-    fun tearDownDispatcher() {
-        Dispatchers.resetMain()
-        testDispatcher.cleanupTestCoroutines()
-    }
+    @get:Rule
+    var mainCoroutineRule = MainCoroutineRule()
 }
