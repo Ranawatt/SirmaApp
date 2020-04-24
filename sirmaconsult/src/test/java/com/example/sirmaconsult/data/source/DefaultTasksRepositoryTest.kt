@@ -1,5 +1,6 @@
 package com.example.sirmaconsult.data.source
 
+import com.example.sirmaconsult.MainCoroutineRule
 import com.example.sirmaconsult.data.Result
 
 import com.example.sirmaconsult.data.Result.Success
@@ -12,6 +13,7 @@ import org.junit.After
 import org.junit.Before
 
 import org.junit.Assert.*
+import org.junit.Rule
 import org.junit.Test
 
 
@@ -40,17 +42,23 @@ class DefaultTasksRepositoryTest {
                 // TODO Dispatchers.Unconfined should be replaced with Dispatchers.Main
                 //  this requires understanding more about coroutines + testing
                 //  so we will keep this as Unconfined for now.
-                tasksRemoteDataSource, tasksLocalDataSource, Dispatchers.Unconfined)
+//                tasksRemoteDataSource, tasksLocalDataSource, Dispatchers.Unconfined
+//                Replacing above line with this line
+                tasksRemoteDataSource,tasksLocalDataSource, Dispatchers.Main)
     }
 
     @Test
-    fun getTasks_requestsAllTasksFromRemoteDataSource() = runBlockingTest{
+    fun getTasks_requestsAllTasksFromRemoteDataSource() = mainCoroutineRule.runBlockingTest{
         // When tasks are requested from the tasks repository
         val tasks = tasksRepository.getTasks(true) as Success
 
         // Then tasks are loaded from the remote data source
         assertThat(tasks.data, IsEqual(remoteTasks))
     }
+
+    @ExperimentalCoroutinesApi
+    @get:Rule
+    var mainCoroutineRule = MainCoroutineRule()
     @After
     fun tearDown() {
     }
