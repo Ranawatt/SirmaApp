@@ -60,12 +60,6 @@ dependencies {
 
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     testImplementation 'junit:junit:4.13'
-    androidTestImplementation 'androidx.test:runner:1.2.0'
-
-    // AndroidX Test - Instrumented testing
-    androidTestImplementation "androidx.test.ext:junit:1.1.1"
-    androidTestImplementation "androidx.test.espresso:espresso-core:3.2.0"
-
     // Kotlin
     implementation 'androidx.fragment:fragment-ktx:1.2.4'
     // Other dependencies
@@ -74,13 +68,8 @@ dependencies {
     testImplementation 'androidx.test.ext:junit-ktx:1.1.1'
     testImplementation "androidx.arch.core:core-testing:2.1.0"
     testImplementation 'androidx.test:core-ktx:1.2.0'
-
     testImplementation 'org.robolectric:robolectric:4.3.1'
     testImplementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.3.4'
-
-    // Dependencies for Android instrumented unit tests
-    androidTestImplementation "junit:junit:4.13"
-    androidTestImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.3.0"
 
     // Testing code should not be included in the main code.
     // Once https://issuetracker.google.com/128612536 is fixed this can be fixed.
@@ -88,11 +77,16 @@ dependencies {
     debugImplementation 'androidx.fragment:fragment-testing:1.2.4'
     implementation "androidx.test:core:1.2.0"
 
+    // AndroidX Test - Instrumented testing
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation "androidx.test.ext:junit:1.1.1"
+    androidTestImplementation "androidx.test.espresso:espresso-core:3.2.0"
     // Dependencies for Android instrumented unit tests
+    androidTestImplementation "junit:junit:4.13"
     androidTestImplementation "org.mockito:mockito-core:2.19.0"
-
     androidTestImplementation "com.linkedin.dexmaker:dexmaker-mockito:2.25.1"
-
     androidTestImplementation "androidx.test.espresso:espresso-contrib:3.2.0"
+    androidTestImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.3.0"
 
+    androidTestImplementation "androidx.arch.core:core-testing:2.1.0"
 }
