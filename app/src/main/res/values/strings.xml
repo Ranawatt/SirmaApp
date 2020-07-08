@@ -7,6 +7,8 @@
     <string name="add_title">Add New Detail</string>
     <string name="task_title">Personal Detail</string>
     <string name="name_field">Field Name</string>
+    <string name="name_first">First Name</string>
+    <string name="name_last">Last Name</string>
     <string name="required">Required</string>
     <string name="address">Address</string>
     <string name="blood_grp">Bld Grp:</string>

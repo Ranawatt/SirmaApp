@@ -38,7 +38,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_alignParentStart="true"
                 android:inputType="text"
-                android:hint="@string/name_field"
+                android:hint="@string/name_first"
                 android:autofillHints="true" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -54,6 +54,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:autofillHints="@string/name_display"
+                android:hint="@string/name_last"
                 android:inputType="text" />
         </com.google.android.material.textfield.TextInputLayout>
 
