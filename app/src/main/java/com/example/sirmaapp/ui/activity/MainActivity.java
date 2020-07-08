@@ -61,6 +61,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         });
     }
 
+
+    @Override
+    public void onClick(View v) {
+        if(v == fab){
+            Intent intent = new Intent(MainActivity.this, AddDetailActivity.class);
+            startActivityForResult(intent, 200);
+        }
+    }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -85,13 +94,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 personalRepository.insertTask(fieldName,displayName,address,passportId,passportIssued,passportExpired,bloodGrp,birthDay);
             }
             updateInputFieldsList();
-        }
-    }
-    @Override
-    public void onClick(View v) {
-        if(v == fab){
-            Intent intent = new Intent(MainActivity.this, AddDetailActivity.class);
-            startActivityForResult(intent, 200);
         }
     }
 }
