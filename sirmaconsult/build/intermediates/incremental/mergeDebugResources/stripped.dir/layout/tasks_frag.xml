@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+                                                        
+
+    
+
+                                           
+
+                                                             
+
+                 
+                            
+                                                                   
+
+           
+
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordinator_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" android:tag="layout/tasks_frag_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+        <com.example.sirmaconsult.ScrollChildSwipeRefreshLayout
+            android:id="@+id/refresh_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:tag="binding_1"                      
+                                                     >
+
+            <RelativeLayout
+                android:id="@+id/tasks_container_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/tasks_linear_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:tag="binding_2"                                           >
+
+                    <TextView
+                        android:id="@+id/filtering_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/list_item_padding"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:layout_marginRight="@dimen/list_item_padding"
+                        android:layout_marginBottom="@dimen/activity_vertical_margin"
+                        android:gravity="center_vertical"
+                        android:tag="binding_3"                                             
+                        android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/tasks_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        android:tag="binding_4"        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/no_tasks_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical"
+                    android:tag="binding_5"                                           >
+
+                    <ImageView
+                        android:id="@+id/no_tasks_icon"
+                        android:layout_width="96dp"
+                        android:layout_height="96dp"
+                        android:layout_gravity="center"
+                        android:tag="binding_6"                                                     
+                        android:contentDescription="@string/no_tasks_image_content_description" />
+
+                    <TextView
+                        android:id="@+id/no_tasks_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="@dimen/list_item_padding"
+                        android:tag="binding_7"                                     />
+                </LinearLayout>
+            </RelativeLayout>
+
+        </com.example.sirmaconsult.ScrollChildSwipeRefreshLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/add_task_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/fab_margin"
+            android:src="@drawable/ic_add"
+            app:fabSize="normal"
+            app:layout_anchor="@id/refresh_layout"
+            app:layout_anchorGravity="bottom|right|end" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+         

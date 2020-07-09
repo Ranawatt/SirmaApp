@@ -1,0 +1,186 @@
+[
+    {
+        "merged": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
+        "source": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_background.xml.flat",
+        "source": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\src\\main\\res\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_trash.png.flat",
+        "source": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\src\\main\\res\\drawable-xhdpi\\ic_trash.png"
+    },
+    {
+        "merged": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\build\\intermediates\\res\\merged\\debug\\layout_statistics_frag.xml.flat",
+        "source": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\src\\main\\res\\layout\\statistics_frag.xml"
+    },
+    {
+        "merged": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\build\\intermediates\\res\\merged\\debug\\layout_tasks_frag.xml.flat",
+        "source": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\src\\main\\res\\layout\\tasks_frag.xml"
+    },
+    {
+        "merged": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\build\\intermediates\\res\\merged\\debug\\layout_nav_header.xml.flat",
+        "source": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\src\\main\\res\\layout\\nav_header.xml"
+    },
+    {
+        "merged": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\build\\intermediates\\res\\merged\\debug\\drawable_ic_verified_user_96dp.xml.flat",
+        "source": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\src\\main\\res\\drawable\\ic_verified_user_96dp.xml"
+    },
+    {
+        "merged": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\build\\intermediates\\res\\merged\\debug\\menu_tasks_fragment_menu.xml.flat",
+        "source": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\src\\main\\res\\menu\\tasks_fragment_menu.xml"
+    },
+    {
+        "merged": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\build\\intermediates\\res\\merged\\debug\\drawable_ic_list.xml.flat",
+        "source": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\src\\main\\res\\drawable\\ic_list.xml"
+    },
+    {
+        "merged": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\build\\intermediates\\res\\merged\\debug\\font_opensans_font.xml.flat",
+        "source": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\src\\main\\res\\font\\opensans_font.xml"
+    },
+    {
+        "merged": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\build\\intermediates\\res\\merged\\debug\\drawable_ic_edit.xml.flat",
+        "source": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\src\\main\\res\\drawable\\ic_edit.xml"
+    },
+    {
+        "merged": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\build\\intermediates\\res\\merged\\debug\\drawable_touch_feedback.xml.flat",
+        "source": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\src\\main\\res\\drawable\\touch_feedback.xml"
+    },
+    {
+        "merged": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\build\\intermediates\\res\\merged\\debug\\drawable_ic_check_circle_96dp.xml.flat",
+        "source": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\src\\main\\res\\drawable\\ic_check_circle_96dp.xml"
+    },
+    {
+        "merged": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\build\\intermediates\\res\\merged\\debug\\drawable_drawer_item_color.xml.flat",
+        "source": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\src\\main\\res\\drawable\\drawer_item_color.xml"
+    },
+    {
+        "merged": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\build\\intermediates\\res\\merged\\debug\\font_opensans_regular.ttf.flat",
+        "source": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\src\\main\\res\\font\\opensans_regular.ttf"
+    },
+    {
+        "merged": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\build\\intermediates\\res\\merged\\debug\\menu_taskdetail_fragment_menu.xml.flat",
+        "source": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\src\\main\\res\\menu\\taskdetail_fragment_menu.xml"
+    },
+    {
+        "merged": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\build\\intermediates\\res\\merged\\debug\\layout_taskdetail_frag.xml.flat",
+        "source": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\src\\main\\res\\layout\\taskdetail_frag.xml"
+    },
+    {
+        "merged": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\build\\intermediates\\res\\merged\\debug\\layout_addtask_frag.xml.flat",
+        "source": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\src\\main\\res\\layout\\addtask_frag.xml"
+    },
+    {
+        "merged": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\build\\intermediates\\res\\merged\\debug\\drawable-v24_logo_no_fill.png.flat",
+        "source": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\src\\main\\res\\drawable-v24\\logo_no_fill.png"
+    },
+    {
+        "merged": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\build\\intermediates\\res\\merged\\debug\\layout_task_item.xml.flat",
+        "source": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\src\\main\\res\\layout\\task_item.xml"
+    },
+    {
+        "merged": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi_ic_trash.xml.flat",
+        "source": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\src\\main\\res\\drawable-anydpi\\ic_trash.xml"
+    },
+    {
+        "merged": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\build\\intermediates\\res\\merged\\debug\\font_opensans_semibold.ttf.flat",
+        "source": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\src\\main\\res\\font\\opensans_semibold.ttf"
+    },
+    {
+        "merged": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_trash.png.flat",
+        "source": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\src\\main\\res\\drawable-xxhdpi\\ic_trash.png"
+    },
+    {
+        "merged": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\build\\intermediates\\res\\merged\\debug\\menu_filter_tasks.xml.flat",
+        "source": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\src\\main\\res\\menu\\filter_tasks.xml"
+    },
+    {
+        "merged": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\build\\intermediates\\res\\merged\\debug\\drawable_ic_filter_list.xml.flat",
+        "source": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\src\\main\\res\\drawable\\ic_filter_list.xml"
+    },
+    {
+        "merged": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\build\\intermediates\\res\\merged\\debug\\drawable_ic_statistics.xml.flat",
+        "source": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\src\\main\\res\\drawable\\ic_statistics.xml"
+    },
+    {
+        "merged": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_trash.png.flat",
+        "source": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\src\\main\\res\\drawable-mdpi\\ic_trash.png"
+    },
+    {
+        "merged": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\build\\intermediates\\res\\merged\\debug\\drawable_ic_add.xml.flat",
+        "source": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\src\\main\\res\\drawable\\ic_add.xml"
+    },
+    {
+        "merged": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\build\\intermediates\\res\\merged\\debug\\layout_tasks_act.xml.flat",
+        "source": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\src\\main\\res\\layout\\tasks_act.xml"
+    },
+    {
+        "merged": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\build\\intermediates\\res\\merged\\debug\\drawable_ic_done.xml.flat",
+        "source": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\src\\main\\res\\drawable\\ic_done.xml"
+    },
+    {
+        "merged": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\build\\intermediates\\res\\merged\\debug\\navigation_nav_graph.xml.flat",
+        "source": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\src\\main\\res\\navigation\\nav_graph.xml"
+    },
+    {
+        "merged": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_trash.png.flat",
+        "source": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\src\\main\\res\\drawable-hdpi\\ic_trash.png"
+    },
+    {
+        "merged": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\build\\intermediates\\res\\merged\\debug\\menu_drawer_actions.xml.flat",
+        "source": "D:\\androidprojects\\SirmaApp\\sirmaconsult\\src\\main\\res\\menu\\drawer_actions.xml"
+    }
+]
