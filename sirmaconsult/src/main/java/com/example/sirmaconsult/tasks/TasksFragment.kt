@@ -19,7 +19,7 @@ import com.google.android.material.snackbar.Snackbar
 import timber.log.Timber
 
 /**
- * Display a grid of [Task]s. User can choose to view all, active or completed tasks.
+ * Display a grid of [Tasks]. User can choose to view all, active or completed tasks.
  */
 class TasksFragment : Fragment() {
 
