@@ -17,7 +17,6 @@ class TasksAdapter(private val viewModel: TasksViewModel) :
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = getItem(position)
-
         holder.bind(viewModel, item)
     }
 
@@ -45,10 +44,8 @@ class TasksAdapter(private val viewModel: TasksViewModel) :
         }
     }
 }
-
 /**
  * Callback for calculating the diff between two non-null items in a list.
- *
  * Used by ListAdapter to calculate the minimum number of changes between and old list and a new
  * list that's been passed to `submitList`.
  */

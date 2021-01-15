@@ -12,7 +12,6 @@ interface TasksDao {
 
     /**
      * Observes list of tasks.
-     *
      * @return all tasks.
      */
     @Query("SELECT * FROM Tasks")
@@ -20,7 +19,6 @@ interface TasksDao {
 
     /**
      * Observes a single task.
-     *
      * @param taskId the task id.
      * @return the task with taskId.
      */
@@ -29,7 +27,6 @@ interface TasksDao {
 
     /**
      * Select all tasks from the tasks table.
-     *
      * @return all tasks.
      */
     @Query("SELECT * FROM Tasks")
@@ -37,7 +34,6 @@ interface TasksDao {
 
     /**
      * Select a task by id.
-     *
      * @param taskId the task id.
      * @return the task with taskId.
      */
@@ -46,7 +42,6 @@ interface TasksDao {
 
     /**
      * Insert a task in the database. If the task already exists, replace it.
-     *
      * @param task the task to be inserted.
      */
     @Insert(onConflict = OnConflictStrategy.REPLACE)
@@ -54,7 +49,6 @@ interface TasksDao {
 
     /**
      * Update a task.
-     *
      * @param task task to be updated
      * @return the number of tasks updated. This should always be 1.
      */
@@ -63,7 +57,6 @@ interface TasksDao {
 
     /**
      * Update the complete status of a task
-     *
      * @param taskId    id of the task
      * @param completed status to be updated
      */
@@ -72,7 +65,6 @@ interface TasksDao {
 
     /**
      * Delete a task by id.
-     *
      * @return the number of tasks deleted. This should always be 1.
      */
     @Query("DELETE FROM Tasks WHERE entryid = :taskId")
@@ -86,7 +78,6 @@ interface TasksDao {
 
     /**
      * Delete all completed tasks from the table.
-     *
      * @return the number of tasks deleted.
      */
     @Query("DELETE FROM Tasks WHERE completed = 1")

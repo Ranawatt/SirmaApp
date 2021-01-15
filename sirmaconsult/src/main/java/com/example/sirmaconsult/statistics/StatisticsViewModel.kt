@@ -47,8 +47,7 @@ class StatisticsViewModel(private val tasksRepository: TasksRepository) : ViewMo
 
 @Suppress("UNCHECKED_CAST")
 class StatisticsViewModelFactory (
-        private val tasksRepository: TasksRepository
-) : ViewModelProvider.NewInstanceFactory() {
+        private val tasksRepository: TasksRepository) : ViewModelProvider.NewInstanceFactory() {
     override fun <T : ViewModel> create(modelClass: Class<T>) =
             (StatisticsViewModel(tasksRepository) as T)
 }
