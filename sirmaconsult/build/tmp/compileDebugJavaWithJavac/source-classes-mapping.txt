@@ -1,0 +1,67 @@
+com/example/sirmaconsult/BuildConfig.java
+ com.example.sirmaconsult.BuildConfig
+androidx/databinding/DataBindingComponent.java
+ androidx.databinding.DataBindingComponent
+androidx/databinding/DataBinderMapperImpl.java
+ androidx.databinding.DataBinderMapperImpl
+androidx/databinding/library/baseAdapters/BR.java
+ androidx.databinding.library.baseAdapters.BR
+com/example/sirmaconsult/databinding/AddtaskFragBinding.java
+ com.example.sirmaconsult.databinding.AddtaskFragBinding
+com/example/sirmaconsult/databinding/StatisticsFragBindingImpl.java
+ com.example.sirmaconsult.databinding.StatisticsFragBindingImpl
+ com.example.sirmaconsult.databinding.StatisticsFragBindingImpl$OnRefreshListenerImpl
+com/example/sirmaconsult/timerlifecycle/TimerToast_LifecycleAdapter.java
+ com.example.sirmaconsult.timerlifecycle.TimerToast_LifecycleAdapter
+com/example/sirmaconsult/DataBinderMapperImpl.java
+ com.example.sirmaconsult.DataBinderMapperImpl
+ com.example.sirmaconsult.DataBinderMapperImpl$InnerBrLookup
+ com.example.sirmaconsult.DataBinderMapperImpl$InnerLayoutIdLookup
+com/example/sirmaconsult/generated/callback/OnClickListener.java
+ com.example.sirmaconsult.generated.callback.OnClickListener
+ com.example.sirmaconsult.generated.callback.OnClickListener$Listener
+com/example/sirmaconsult/databinding/AddtaskFragBindingImpl.java
+ com.example.sirmaconsult.databinding.AddtaskFragBindingImpl
+ com.example.sirmaconsult.databinding.AddtaskFragBindingImpl$1
+ com.example.sirmaconsult.databinding.AddtaskFragBindingImpl$2
+com/example/sirmaconsult/DataBindingTriggerClass.java
+ com.example.sirmaconsult.DataBindingTriggerClass
+com/example/sirmaconsult/databinding/StatisticsFragBinding.java
+ com.example.sirmaconsult.databinding.StatisticsFragBinding
+com/example/sirmaconsult/data/source/local/TasksDao_Impl.java
+ com.example.sirmaconsult.data.source.local.TasksDao_Impl
+ com.example.sirmaconsult.data.source.local.TasksDao_Impl$1
+ com.example.sirmaconsult.data.source.local.TasksDao_Impl$10
+ com.example.sirmaconsult.data.source.local.TasksDao_Impl$11
+ com.example.sirmaconsult.data.source.local.TasksDao_Impl$12
+ com.example.sirmaconsult.data.source.local.TasksDao_Impl$13
+ com.example.sirmaconsult.data.source.local.TasksDao_Impl$14
+ com.example.sirmaconsult.data.source.local.TasksDao_Impl$15
+ com.example.sirmaconsult.data.source.local.TasksDao_Impl$16
+ com.example.sirmaconsult.data.source.local.TasksDao_Impl$2
+ com.example.sirmaconsult.data.source.local.TasksDao_Impl$3
+ com.example.sirmaconsult.data.source.local.TasksDao_Impl$4
+ com.example.sirmaconsult.data.source.local.TasksDao_Impl$5
+ com.example.sirmaconsult.data.source.local.TasksDao_Impl$6
+ com.example.sirmaconsult.data.source.local.TasksDao_Impl$7
+ com.example.sirmaconsult.data.source.local.TasksDao_Impl$8
+ com.example.sirmaconsult.data.source.local.TasksDao_Impl$9
+com/example/sirmaconsult/BR.java
+ com.example.sirmaconsult.BR
+com/example/sirmaconsult/data/source/local/ToDoDatabase_Impl.java
+ com.example.sirmaconsult.data.source.local.ToDoDatabase_Impl
+ com.example.sirmaconsult.data.source.local.ToDoDatabase_Impl$1
+com/example/sirmaconsult/databinding/TaskdetailFragBindingImpl.java
+ com.example.sirmaconsult.databinding.TaskdetailFragBindingImpl
+ com.example.sirmaconsult.databinding.TaskdetailFragBindingImpl$OnRefreshListenerImpl
+com/example/sirmaconsult/databinding/TaskItemBindingImpl.java
+ com.example.sirmaconsult.databinding.TaskItemBindingImpl
+com/example/sirmaconsult/databinding/TaskItemBinding.java
+ com.example.sirmaconsult.databinding.TaskItemBinding
+com/example/sirmaconsult/databinding/TasksFragBinding.java
+ com.example.sirmaconsult.databinding.TasksFragBinding
+com/example/sirmaconsult/databinding/TaskdetailFragBinding.java
+ com.example.sirmaconsult.databinding.TaskdetailFragBinding
+com/example/sirmaconsult/databinding/TasksFragBindingImpl.java
+ com.example.sirmaconsult.databinding.TasksFragBindingImpl
+ com.example.sirmaconsult.databinding.TasksFragBindingImpl$OnRefreshListenerImpl
