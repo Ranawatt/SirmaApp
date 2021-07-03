@@ -27,20 +27,25 @@ public class InputField implements Serializable {
     private String fieldName;
     @ColumnInfo(name = "display_name")
     private String displayName;
+    @ColumnInfo(name = "address")
     private String address;
+    @ColumnInfo(name = "passport_id")
     private String passportId;
-    private String bloodgroup;
-
+    @ColumnInfo(name = "blood_group")
+    private String bloodGroup;
+    @ColumnInfo(name = "passport_issued")
     private Date passportIssued;
+    @ColumnInfo(name = "passport_expired")
     private Date passportExpired;
+    @ColumnInfo(name = "birth_date")
     private Date birthDate;
 
-    public String getBloodgroup() {
-        return bloodgroup;
+    public String getBloodGroup() {
+        return bloodGroup;
     }
 
-    public void setBloodgroup(String bloodgroup) {
-        this.bloodgroup = bloodgroup;
+    public void setBloodGroup(String bloodGroup) {
+        this.bloodGroup = bloodGroup;
     }
 
     public Date getBirthDate() {

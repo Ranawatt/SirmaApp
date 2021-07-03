@@ -34,7 +34,7 @@ public class InputFieldAdapter extends RecyclerView.Adapter<InputFieldAdapter.In
 
         InputField inputField = inputFieldsList.get(position);
         holder.birthDate.setText("D_O_B : "+inputField.getBirthDate());
-        holder.bloodGrp.setText("Blood Group : "+inputField.getBloodgroup());
+        holder.bloodGrp.setText("Blood Group : "+inputField.getBloodGroup());
         holder.passportId.setText("Passport ID : "+inputField.getPassportId());
         holder.address.setText("Address : "+inputField.getAddress());
         holder.passportIssued.setText("Issued Date : "+inputField.getPassportIssued());

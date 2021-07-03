@@ -15,7 +15,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 //        timerToast = TimerToast(application,this)
-
 //        timerToast.start()
         viewModel = ViewModelProviders.of(this).get(MainViewModel ::class.java)
         viewModel.timerData.observe(this, Observer {

@@ -1,6 +1,5 @@
 package com.example.sirmaconsult.tasks
 
-import android.app.Application
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
 import androidx.lifecycle.*
@@ -24,7 +23,7 @@ class TasksViewModel(private val tasksRepository: TasksRepository) : ViewModel()
 //    // here. We'll show you how to fix this during the codelab
 //    private val tasksRepository = DefaultTasksRepository.getRepository(application)
 
-    private val _forceUpdate = MutableLiveData<Boolean>(false)
+    private val _forceUpdate = MutableLiveData(false)
 
     private val _items: LiveData<List<Task>> = _forceUpdate.switchMap { forceUpdate ->
         if (forceUpdate) {

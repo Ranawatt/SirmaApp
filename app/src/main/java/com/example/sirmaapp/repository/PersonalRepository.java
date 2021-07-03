@@ -47,7 +47,7 @@ public class PersonalRepository {
         inputField.setFieldName(fieldName);
         inputField.setDisplayName(displayName);
         inputField.setAddress(address);
-        inputField.setBloodgroup(bldGrp);
+        inputField.setBloodGroup(bldGrp);
         inputField.setPassportId(passportId);
         inputField.setPassportIssued(passPortIssued);
         inputField.setPassportExpired(passportExpired);

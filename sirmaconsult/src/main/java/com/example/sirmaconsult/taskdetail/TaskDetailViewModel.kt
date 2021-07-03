@@ -75,7 +75,7 @@ class TaskDetailViewModel(private val tasksRepository: TasksRepository) : ViewMo
             return
         }
         // Trigger the load
-        _taskId.value = taskId
+        _taskId.value = taskId!!
     }
 
     private fun computeResult(taskResult: Result<Task>): Task? {
