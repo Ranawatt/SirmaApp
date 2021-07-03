@@ -1,7 +1,6 @@
 package com.example.sirmaapp.ui.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.lifecycle.Observer;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
@@ -15,8 +14,6 @@ import com.example.sirmaapp.model.InputField;
 import com.example.sirmaapp.repository.PersonalRepository;
 import com.example.sirmaapp.ui.adapter.InputFieldAdapter;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -38,7 +35,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new StaggeredGridLayoutManager(2 , StaggeredGridLayoutManager.VERTICAL));
 //        recyclerView.addOnItemTouchListener(new RecyclerItemClickListener(this, this));
-
         updateInputFieldsList();
     }
 
@@ -48,19 +44,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void updateInputFieldsList() {
-        personalRepository.getTasks().observe(this, new Observer<List<InputField>>() {
-            @Override
-            public void onChanged(List<InputField> inputFields) {
-                if (inputFields.size() > 0) {
-                    if (adapter == null) {
-                        adapter = new InputFieldAdapter(inputFields);
-                        recyclerView.setAdapter(adapter);
-                    } else adapter.addTasks(inputFields);
-                }
+        personalRepository.getTasks().observe(this, inputFields -> {
+            if (inputFields.size() > 0) {
+                if (adapter == null) {
+                    adapter = new InputFieldAdapter(inputFields);
+                    recyclerView.setAdapter(adapter);
+                } else adapter.addTasks(inputFields);
             }
         });
     }
-
 
     @Override
     public void onClick(View v) {
