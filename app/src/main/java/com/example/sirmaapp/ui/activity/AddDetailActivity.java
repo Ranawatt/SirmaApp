@@ -12,12 +12,10 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.example.sirmaapp.R;
 import com.example.sirmaapp.model.InputField;
 import com.example.sirmaapp.util.AppUtils;
@@ -46,7 +44,7 @@ public class AddDetailActivity extends AppCompatActivity implements View.OnClick
     int day = cldr.get(Calendar.DAY_OF_MONTH);
     int month = cldr.get(Calendar.MONTH);
     int year = cldr.get(Calendar.YEAR);
-    String arr[]={"A+","B+","O+","AB+","A-","B-","O-","AB-"};
+    String[] arr={"A+","B+","O+","AB+","A-","B-","O-","AB-"};
     String getBloodGrp = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -125,28 +123,20 @@ public class AddDetailActivity extends AppCompatActivity implements View.OnClick
                 intent.putExtra("intent-task", inputField);
                 setResult(Activity.RESULT_OK, intent);
             }
-
             finish();
             overridePendingTransition(R.anim.stay, R.anim.slide_down);
 
         }else if(v == birthDate){
-
             // date picker dialog
-            picker = new DatePickerDialog(this, (view, year, monthOfYear, dayOfMonth) -> {
-                birthDate.setText(dayOfMonth + "/" + (monthOfYear+1) + "/" + year);
-            }, year, month, day);
+            picker = new DatePickerDialog(this, (view, year, monthOfYear, dayOfMonth) ->
+                birthDate.setText((dayOfMonth + "/" + (monthOfYear+1) + "/" + year)), year, month, day);
         }else if(v == etPassportExpire){
-            picker = new DatePickerDialog(AddDetailActivity.this,
-                    new DatePickerDialog.OnDateSetListener() {
-                        @Override
-                        public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
-                            etPassportExpire.setText(dayOfMonth + "/" + (monthOfYear + 1) + "/" + year);
-                        }
-                    }, year, month, day);
+            picker = new DatePickerDialog(AddDetailActivity.this, (view, year, monthOfYear, dayOfMonth) ->
+                    etPassportExpire.setText((dayOfMonth + "/" + (monthOfYear + 1) + "/" + year)), year, month, day);
             picker.show();
         }else if(v == etPassportIssue){
             picker = new DatePickerDialog(AddDetailActivity.this, (view, year, monthOfYear, dayOfMonth) ->
-                    etPassportIssue.setText(dayOfMonth + "/" + (monthOfYear + 1) + "/" + year), year, month, day);
+                    etPassportIssue.setText((dayOfMonth + "/" + (monthOfYear + 1) + "/" + year)), year, month, day);
             picker.show();
         }
     }

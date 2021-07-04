@@ -1,0 +1,65 @@
+Index: app/src/main/java/com/example/sirmaapp/ui/activity/AddDetailActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.sirmaapp.ui.activity;\r\n\r\nimport androidx.appcompat.app.AppCompatActivity;\r\nimport androidx.appcompat.widget.AppCompatSpinner;\r\n\r\nimport android.app.Activity;\r\nimport android.app.DatePickerDialog;\r\nimport android.content.Intent;\r\nimport android.os.Bundle;\r\nimport android.util.Log;\r\nimport android.view.View;\r\nimport android.widget.AdapterView;\r\nimport android.widget.ArrayAdapter;\r\nimport android.widget.Button;\r\nimport android.widget.DatePicker;\r\nimport android.widget.EditText;\r\nimport android.widget.ImageView;\r\nimport android.widget.TextView;\r\nimport android.widget.Toast;\r\n\r\nimport com.example.sirmaapp.R;\r\nimport com.example.sirmaapp.model.InputField;\r\nimport com.example.sirmaapp.util.AppUtils;\r\nimport java.util.Calendar;\r\nimport java.util.Date;\r\nimport java.util.GregorianCalendar;\r\n\r\npublic class AddDetailActivity extends AppCompatActivity implements View.OnClickListener, AdapterView.OnItemSelectedListener {\r\n\r\n    private EditText fieldName;\r\n    private EditText displayName;\r\n    private EditText etAddress;\r\n    private EditText etPassportId;\r\n    private EditText etPassportIssue;\r\n    private EditText etPassportExpire;\r\n    \r\n    private Button btnSubmit;\r\n    private TextView toolbarTitle,textTime,birthDate,btnDone;\r\n    private DatePickerDialog picker;\r\n    private AppCompatSpinner spinner;\r\n\r\n    private ImageView btnDelete;\r\n    private InputField inputField;\r\n\r\n    final Calendar cldr = GregorianCalendar.getInstance();\r\n    int day = cldr.get(Calendar.DAY_OF_MONTH);\r\n    int month = cldr.get(Calendar.MONTH);\r\n    int year = cldr.get(Calendar.YEAR);\r\n    String arr[]={\"A+\",\"B+\",\"O+\",\"AB+\",\"A-\",\"B-\",\"O-\",\"AB-\"};\r\n    String getBloodGrp = null;\r\n    @Override\r\n    protected void onCreate(Bundle savedInstanceState) {\r\n        super.onCreate(savedInstanceState);\r\n        setContentView(R.layout.activity_add_detail);\r\n\r\n        initView();\r\n        inputField = (InputField) getIntent().getSerializableExtra(\"intent-detail\");\r\n        if(inputField == null) {\r\n            toolbarTitle.setText(getString(R.string.add_title));\r\n            btnDelete.setImageResource(R.drawable.btn_done);\r\n            btnDelete.setTag(R.drawable.btn_done);\r\n            textTime.setText(AppUtils.getFormattedDateString(AppUtils.getCurrentDateTime()));\r\n\r\n        }\r\n        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this,R.layout.support_simple_spinner_dropdown_item,arr);\r\n        spinner.setAdapter(arrayAdapter);\r\n        spinner.setOnItemSelectedListener(this);\r\n        birthDate.setOnClickListener(this);\r\n        etPassportIssue.setOnClickListener(this);\r\n        etPassportExpire.setOnClickListener(this);\r\n        btnSubmit.setOnClickListener(this);\r\n    }\r\n\r\n    private void initView() {\r\n        fieldName = findViewById(R.id.etFieldName);\r\n        displayName = findViewById(R.id.etDisplayName);\r\n        birthDate = findViewById(R.id.etBirthDate);\r\n        etAddress = findViewById(R.id.etAddress);\r\n        etPassportId = findViewById(R.id.etPassportId);\r\n        etPassportIssue = findViewById(R.id.etPassportIssue);\r\n        etPassportExpire = findViewById(R.id.etPassportExpire);\r\n        btnSubmit =  findViewById(R.id.btnSubmit);\r\n        btnDone = findViewById(R.id.btn_done);\r\n        btnDelete = findViewById(R.id.btn_close);\r\n        toolbarTitle = findViewById(R.id.title);\r\n        textTime = findViewById(R.id.text_time);\r\n        spinner = findViewById(R.id.action_bar_spinner);\r\n    }\r\n\r\n    @Override\r\n    public void onClick(View v) {\r\n        if(v == btnSubmit){\r\n            Intent intent = getIntent();\r\n\r\n            if(inputField != null){\r\n                inputField.setFieldName(fieldName.getText().toString());\r\n                inputField.setDisplayName(displayName.getText().toString());\r\n                inputField.setAddress(etAddress.getText().toString());\r\n                inputField.setPassportId(etPassportId.getText().toString());\r\n                inputField.setPassportIssued((Date) etPassportIssue.getText());\r\n                inputField.setPassportExpired((Date) etPassportExpire.getText());\r\n                intent.putExtra(\"intent-detail\",inputField);\r\n            }else{\r\n                intent.putExtra(\"intent-title\", fieldName.getText().toString().trim());\r\n                intent.putExtra(\"intent-desc\", displayName.getText().toString().trim());\r\n                intent.putExtra(\"intent-format\",etAddress.getText().toString().trim());\r\n                intent.putExtra(\"intent-bldgrp\",getBloodGrp);\r\n                intent.putExtra(\"intent-min\",etPassportId.getText().toString().trim());\r\n                intent.putExtra(\"intent-max\",etPassportIssue.getText().toString().trim());\r\n                intent.putExtra(\"intent-exp\", etPassportExpire.getText().toString().trim());\r\n                intent.putExtra(\"intent-birth\",birthDate.getText().toString().trim());\r\n            }\r\n            setResult(Activity.RESULT_OK,intent);\r\n            Log.d(\"Data filled\", String.valueOf(intent));\r\n            Toast.makeText(AddDetailActivity.this,\"Data has saved\",Toast.LENGTH_LONG).show();\r\n            finish();\r\n            overridePendingTransition(R.anim.stay, R.anim.slide_down);\r\n        }else if(v == btnDelete){\r\n            if((Integer)btnDelete.getTag() == R.drawable.btn_done) {\r\n                setResult(Activity.RESULT_CANCELED);\r\n\r\n            } else {\r\n                Intent intent = getIntent();\r\n                intent.putExtra(\"intent-delete\", true);\r\n                intent.putExtra(\"intent-task\", inputField);\r\n                setResult(Activity.RESULT_OK, intent);\r\n            }\r\n\r\n            finish();\r\n            overridePendingTransition(R.anim.stay, R.anim.slide_down);\r\n\r\n        }else if(v == birthDate){\r\n\r\n            // date picker dialog\r\n            picker = new DatePickerDialog(this, (view, year, monthOfYear, dayOfMonth) -> {\r\n                birthDate.setText(dayOfMonth + \"/\" + (monthOfYear+1) + \"/\" + year);\r\n            }, year, month, day);\r\n        }else if(v == etPassportExpire){\r\n            picker = new DatePickerDialog(AddDetailActivity.this,\r\n                    new DatePickerDialog.OnDateSetListener() {\r\n                        @Override\r\n                        public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {\r\n                            etPassportExpire.setText(dayOfMonth + \"/\" + (monthOfYear + 1) + \"/\" + year);\r\n                        }\r\n                    }, year, month, day);\r\n            picker.show();\r\n        }else if(v == etPassportIssue){\r\n            picker = new DatePickerDialog(AddDetailActivity.this, (view, year, monthOfYear, dayOfMonth) ->\r\n                    etPassportIssue.setText(dayOfMonth + \"/\" + (monthOfYear + 1) + \"/\" + year), year, month, day);\r\n            picker.show();\r\n        }\r\n    }\r\n\r\n    @Override\r\n    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {\r\n        getBloodGrp = parent.getItemAtPosition(position).toString();\r\n        parent.getItemAtPosition(position);\r\n    }\r\n\r\n    @Override\r\n    public void onNothingSelected(AdapterView<?> parent) {\r\n\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/sirmaapp/ui/activity/AddDetailActivity.java	(revision 4d42a697a15600e41a4b383fcdac1fe88b27cc3b)
++++ app/src/main/java/com/example/sirmaapp/ui/activity/AddDetailActivity.java	(date 1625327025835)
+@@ -12,12 +12,10 @@
+ import android.widget.AdapterView;
+ import android.widget.ArrayAdapter;
+ import android.widget.Button;
+-import android.widget.DatePicker;
+ import android.widget.EditText;
+ import android.widget.ImageView;
+ import android.widget.TextView;
+ import android.widget.Toast;
+-
+ import com.example.sirmaapp.R;
+ import com.example.sirmaapp.model.InputField;
+ import com.example.sirmaapp.util.AppUtils;
+@@ -46,7 +44,7 @@
+     int day = cldr.get(Calendar.DAY_OF_MONTH);
+     int month = cldr.get(Calendar.MONTH);
+     int year = cldr.get(Calendar.YEAR);
+-    String arr[]={"A+","B+","O+","AB+","A-","B-","O-","AB-"};
++    String[] arr={"A+","B+","O+","AB+","A-","B-","O-","AB-"};
+     String getBloodGrp = null;
+     @Override
+     protected void onCreate(Bundle savedInstanceState) {
+@@ -125,28 +123,20 @@
+                 intent.putExtra("intent-task", inputField);
+                 setResult(Activity.RESULT_OK, intent);
+             }
+-
+             finish();
+             overridePendingTransition(R.anim.stay, R.anim.slide_down);
+ 
+         }else if(v == birthDate){
+-
+             // date picker dialog
+-            picker = new DatePickerDialog(this, (view, year, monthOfYear, dayOfMonth) -> {
+-                birthDate.setText(dayOfMonth + "/" + (monthOfYear+1) + "/" + year);
+-            }, year, month, day);
++            picker = new DatePickerDialog(this, (view, year, monthOfYear, dayOfMonth) ->
++                birthDate.setText((dayOfMonth + "/" + (monthOfYear+1) + "/" + year)), year, month, day);
+         }else if(v == etPassportExpire){
+-            picker = new DatePickerDialog(AddDetailActivity.this,
+-                    new DatePickerDialog.OnDateSetListener() {
+-                        @Override
+-                        public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
+-                            etPassportExpire.setText(dayOfMonth + "/" + (monthOfYear + 1) + "/" + year);
+-                        }
+-                    }, year, month, day);
++            picker = new DatePickerDialog(AddDetailActivity.this, (view, year, monthOfYear, dayOfMonth) ->
++                    etPassportExpire.setText((dayOfMonth + "/" + (monthOfYear + 1) + "/" + year)), year, month, day);
+             picker.show();
+         }else if(v == etPassportIssue){
+             picker = new DatePickerDialog(AddDetailActivity.this, (view, year, monthOfYear, dayOfMonth) ->
+-                    etPassportIssue.setText(dayOfMonth + "/" + (monthOfYear + 1) + "/" + year), year, month, day);
++                    etPassportIssue.setText((dayOfMonth + "/" + (monthOfYear + 1) + "/" + year)), year, month, day);
+             picker.show();
+         }
+     }
